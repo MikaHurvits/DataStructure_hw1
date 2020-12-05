@@ -10,7 +10,6 @@
 
 public class AVLTree {
  
-private IAVLNode left;	
 private IAVLNode root;     //creating a root field for the AVLTree type
 
 //A-----------------------------------------------  tree constructor  ---------------------------------------
