@@ -14,7 +14,7 @@ private IAVLNode root;     //creating a root field for the AVLTree type
 
 //A-----------------------------------------------  tree constructor  ---------------------------------------
 
-	public AVLTree0() {
+	public AVLTree() {
 		AVLNode treeRoot = new AVLNode(); 
 		this.root = treeRoot;
 	}
@@ -146,12 +146,7 @@ public String max()
 		  //int[] xArr = new int[xSize];
 		  if (xSize == 0 ) { 							//its an EXT leaf
 			  return null;
-		  }
-		  
-		  keysToArrayRec()
-		  
-		  
-		  
+		  }		  
 		  int[] leftArr = keysToArrayRec((AVLNode)x.getLeft());
 		  int[] rightArr = keysToArrayRec((AVLNode)x.getRight());
 		  System.arraycopy(leftArr, 0, xArr, 0, leftArr.length);
