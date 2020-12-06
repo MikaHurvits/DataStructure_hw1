@@ -133,10 +133,10 @@ public String max()
 */
 
 //############################## naive solution with high complexity, needs modifications #####################
-
+/*
 	  public int[] keysToArray() {						//Envelope function
 		  AVLNode rootNode = (AVLNode)this.root;		//casting root from IAVLNode to AVLNode - in order to use the getSize function
-		  int[] res = new int[this.root.size];
+		  int[] res = new int[this.root.getSize()];
 		  return keysToArrayRec(rootNode,0);
 	  }
 	  
@@ -154,7 +154,7 @@ public String max()
 		  System.arraycopy(rightArr, 0, xArr, leftArr.length + 1, rightArr.length);
 		  return xArr;
 	  }
-
+*/
 //----------------------------------------------------------------------------
 
 /**
@@ -182,8 +182,11 @@ public String[] infoToArray()
  */
 public int size()
 {
-	   return 42; // to be replaced by student code
+	AVLNode leftSon = (AVLNode)this.root.getLeft();
+	AVLNode rightSon = (AVLNode)this.root.getRight();
+	return leftSon.getSize() + 1 + rightSon.getSize();
 }
+
 
 //A---------------------------------------------  getRoot ()  --------------------------------------------
 
@@ -341,6 +344,11 @@ public IAVLNode getRoot()
 	   {
 	     return rank; 
    }
+		//------------------ adding a getSize function  ------------
+		
+		public int getSize() {
+			return this.size;
+		}
  }
 
 }
